@@ -19,7 +19,7 @@ describe('4. Teste o componente <NotFound.js />', () => {
     const { history } = renderWithRouter(<App />);
     history.push('/xablau');
 
-    const image = screen.getByAltText(/Pikachu crying/i);
+    const image = screen.getByRole('img', { name: /Pikachu crying/i });
     expect(image).toHaveAttribute('src', 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
   });
 });
